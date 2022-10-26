@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(36, 36, 36);
+}
+
+.center {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    color: white;
+}
+
+#btn {
+    background-color: green;
+    color: white;
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btn.active {
+    background-color: red;
+}
