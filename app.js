@@ -44,12 +44,12 @@ function stopTimer() {
 }
 
 btn.addEventListener('click', () => {
-    if(btn.innerHTML == 'START') {
-        btn.innerHTML = 'STOP'
+    if(btn.innerHTML == 'Start') {
+        btn.innerHTML = 'Stop'
         btn.classList.add('active')
         checkInterval()
-    } else if (btn.innerHTML == 'STOP') {
-        btn.innerHTML = 'START'
+    } else if (btn.innerHTML == 'Stop') {
+        btn.innerHTML = 'Start'
         btn.classList.remove('active')
         stopTimer()
     }
