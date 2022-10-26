@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(17, 17, 17);
 }
 
 .center {
@@ -8,26 +14,29 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0 1rem;
 }
 
 #timer {
     display: flex;
+    position: absolute;
+    width: 100%;
+    top: 13rem;
     justify-content: center;
     color: white;
-    font-size: 65px;
-    width: 100%;
+    font-size: 86px;
+    
 }
 
 #start-btn {
     background-color: green;
-    color: white;
+    color: rgb(0, 255, 0);
     width: 75px;
     height: 75px;
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 #lap-btn {
@@ -38,15 +47,18 @@ body {
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid rgb(90, 90, 90);
+    padding: 1rem;
 }
 
 #start-btn.active {
-    background-color: red;
+    background-color: rgb(148, 0, 0);
+    color: rgb(255, 0, 0);
 }
