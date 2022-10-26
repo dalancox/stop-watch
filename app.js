@@ -1,7 +1,7 @@
 const time = document.getElementById('timer')
 const start = document.getElementById('start')
 const stop = document.getElementById('stop')
-const btn = document.getElementById('btn')
+const btn = document.getElementById('start-btn')
 
 let minute = 0
 let seconds = 0;
