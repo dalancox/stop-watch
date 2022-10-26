@@ -6,9 +6,13 @@ const btn = document.getElementById('start-btn')
 let minute = 0
 let seconds = 0;
 let milliseconds = 0;
+let m = 0 
+let s = 0
+let ms = 0
 let nIntervId;
 
-time.innerHTML = `${minute}: ${seconds}.${milliseconds}`
+
+
 
 function checkInterval() {
     if(!nIntervId) {
@@ -18,14 +22,19 @@ function checkInterval() {
 
 function startTimer() {
     milliseconds++
-    if(milliseconds > 100) {
-        milliseconds = 0
+    if(milliseconds >= 99) {
         seconds++
-    } else if (seconds > 60) {
-        seconds = 0
+        milliseconds = 0
+    } else if (seconds >= 60) {
         minute++
+        seconds = 0
     }
-    time.innerHTML = `${minute}: ${seconds}s.${milliseconds}`
+
+    m = minute < 10 ? "0" + minute : minute
+    s = seconds < 10 ? "0" + seconds : seconds
+    ms = milliseconds < 10 ? "0" + milliseconds : milliseconds
+
+    time.innerHTML = `${m}:${s}.${ms}`
 }
 
 function stopTimer() {
@@ -33,8 +42,6 @@ function stopTimer() {
 
     nIntervId = null
 }
-
-
 
 btn.addEventListener('click', () => {
     if(btn.innerHTML == 'START') {
